@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/back_application"
+    android:background="@color/background_color"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <soup.neumorphism.NeumorphFloatingActionButton
+                app:neumorph_shadowElevation="3dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/fab_playlist"
+                style="@style/Widget.Neumorph.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:neumorph_shadowColorDark="@color/gray900"
+                app:neumorph_shadowColorLight="@color/gray700"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_playlist_play_24" />
+
+            <soup.neumorphism.NeumorphFloatingActionButton
+                app:neumorph_shadowElevation="3dp"
+                android:layout_alignParentLeft="true"
+                style="@style/Widget.Neumorph.FloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:neumorph_shadowColorDark="@color/gray900"
+                app:neumorph_shadowColorLight="@color/gray700"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_filter_list_24" />
+
+        </RelativeLayout>
+
+        <soup.neumorphism.NeumorphCardView
+            style="@style/Widget.Neumorph.CardView.Normal"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="200dp"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/img_music"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <TextView
+            tools:text="واقعی"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/gray200"
+            android:textSize="26sp"
+            android:id="@+id/txt_name_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            tools:text="ماکان بند"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/gray300"
+            android:textSize="18sp"
+            android:id="@+id/txt_name_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_music"
+            app:haloColor="@color/gray300"
+            app:thumbStrokeWidth="4dp"
+            app:thumbStrokeColor="@color/gray900"
+            app:thumbColor="@color/yellow"
+            app:labelBehavior="gone"
+            app:trackColorActive="@color/orange"
+            app:trackColorInactive="@color/gray900"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_duration"
+                android:textColor="@color/gray100"
+                android:textSize="16sp"
+                android:layout_gravity="right"
+                tools:text="02:43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txt_position"
+                android:textColor="@color/gray100"
+                android:textSize="16sp"
+                android:layout_gravity="left"
+                tools:text="00:00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <soup.neumorphism.NeumorphFloatingActionButton
+                android:layout_centerVertical="true"
+                app:neumorph_shadowElevation="3dp"
+                android:layout_toLeftOf="@+id/fab_play"
+                android:layout_marginRight="16dp"
+                android:id="@+id/fab_previous"
+                style="@style/Widget.Neumorph.FloatingActionButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:neumorph_shadowColorDark="@color/gray900"
+                app:neumorph_shadowColorLight="@color/gray700"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_skip_previous_24" />
+
+            <soup.neumorphism.NeumorphFloatingActionButton
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:neumorph_shadowElevation="3dp"
+                android:id="@+id/fab_play"
+                style="@style/Widget.Neumorph.FloatingActionButton"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:neumorph_shadowColorDark="@color/gray900"
+                app:neumorph_shadowColorLight="@color/gray700"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_pause_24" />
+
+            <soup.neumorphism.NeumorphFloatingActionButton
+                android:layout_centerVertical="true"
+                app:neumorph_shadowElevation="3dp"
+                android:layout_toRightOf="@+id/fab_play"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/fab_next"
+                style="@style/Widget.Neumorph.FloatingActionButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:neumorph_shadowColorDark="@color/gray900"
+                app:neumorph_shadowColorLight="@color/gray700"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_skip_next_24" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/play_list" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
